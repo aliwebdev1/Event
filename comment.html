@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment stat</title>
+</head>
+
+<body>
+    <section>
+        <div id="comment-box">
+            <h1>add your comment here</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident neque voluptate distinctio dicta
+                molestias? Fugiat cumque molestias doloremque asperiores iure? Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Provident neque voluptate distinctio dicta
+                molestias? Fugiat cumque molestias doloremque asperiores iure? </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident neque voluptate distinctio dicta
+                molestias? Fugiat cumque molestias doloremque asperiores iure? Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Provident neque voluptate distinctio dicta
+                molestias? Fugiat cumque molestias doloremque asperiores iure? </p>
+
+        </div>
+        <div>
+            <textarea name="" id="new-comment" cols="60" rows="7"></textarea>
+            <br>
+            <button id="click-post">Post</button>
+        </div>
+    </section>
+
+    <script>
+
+        document.getElementById('click-post').addEventListener('click', function () {
+            const commentInput = document.getElementById('new-comment');
+            // console.log(commentInput.value);
+
+            const p = document.createElement('p');
+            p.innerText = commentInput.value;
+
+            const box = document.getElementById('comment-box');
+            box.appendChild(p);
+
+            commentInput.value = '';
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
